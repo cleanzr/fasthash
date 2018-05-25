@@ -15,13 +15,13 @@ g++-7 -std=c++11 C++Codes/*.cpp -o output -fopenmp
  python plot.py --input log-restaurant --gt 753
 
 #For CD
-# for ((i=6;i<=20;i+=4)) ; 
-# 	do for ((j=1;j<=3; j++));
-#  		do ./output config_cd.txt 1 $i; python pipeline.py --flag 0 --id $i --trainsize 0.5 --input cd_pair.csv --goldstan data/cd.csv --delimiter ';' --output log-cd ; 
-# 	done
-# done
+ for ((i=6;i<=20;i+=4)) ; 
+ 	do for ((j=1;j<=3; j++));
+  		do ./output config_cd.txt 1 $i; python pipeline.py --flag 0 --id $i --trainsize 0.5 --input cd_pair.csv --goldstan data/cd.csv --delimiter ';' --output log-cd ; 
+ 	done
+ done
 
-# python plot.py --input log-cd --gt 9508
+ python plot.py --input log-cd --gt 9508
 
 #For Voter
 # for ((i=25;i<=40;i+=5)) ; 
