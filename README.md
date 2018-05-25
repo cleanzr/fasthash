@@ -4,6 +4,10 @@
  #### Introduction
  
  The [fasthash (Unique Entity Estimation) Algorithm](http://arxiv.org/abs/1305.6659) is a way of tackling a sub-task of entity resolution (record linkage or de-duplication), namely unique estimation with associated standard error of these estimates. Unique entity estimation shares many fundamental challenges of entity resolution, namely, that the computational cost of all-to-all entity comparisons is intractable for large databases. To circumvent this computational barrier, we propose an efficient (near-linear time) estimation algorithm based on locality sensitive hashing (LSH). Our estimator, under realistic assumptions, is unbiased and has provably low variance compared to existing random sampling based approaches. In addition, we empirically show its superiority over the state-of-the-art estimators on three real applications. We also apply our estimator to a subset of the Syrian conflict (March 2011 -- April 2014), where our results are very similar in nature to those of the Human Rights Data Analysis Group (HRDAG), which have provided us with the data and we use to benchmark our methodology and algorithms. For the full details of our paper, please refer to and cite [Chen, Shrivastava, Steorts (2018), To Appear, AoAS](https://arxiv.org/abs/1710.02690). Efficient C++ and Python code is provided on this repository. In addition, we provided the two public data sets and code to reproduce our LSHE estimates for full transparency and reproducibility. If one has access to the two private data sets from our paper, our code will reproduce these as well. All pre-processing scripts are included for full reproducibility and transparency. 
+ 
+<p align="center">
+<img src="https://github.com/resteorts/fasthash/images/figure-lshe-restaurant.png?raw=true"/>
+</p>
 
 #### Usage
 
