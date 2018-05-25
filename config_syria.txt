@@ -1,0 +1,46 @@
+##############################################################
+# AnyLine containing `#' with be treated as comment.
+# The Typical Format is Variablename = Value
+###############################################################
+
+# Choose K and L Wisely, try with higher values of K and go down. Typically in range 1-5 for small pruning,
+#for rigorous pruning use larger values of K 
+
+K=15
+
+# More L increases the recall but also reports more pair. Less sensitive than K
+
+L=10
+
+# ngrams length
+
+shingles=3
+
+# Thresholds, only reports if found in at least this many buckets (cancels random noise). If you are missing pairs #decrease this
+Thresh=2
+
+
+#Give the input CSV file. First line will be ignored (assumed to be header). Every line will be treated as a #record. 
+#The line number of record will be its ID. That is the fist line after header is treated as record with ID 1 etc.
+
+Input=data/syria.csv
+#Output File: this will contain a pair of record IDs in each line indicating a possible match. 
+
+Output=syria_pair.csv
+##############################################################################
+#These are advanced parameters depending on memory 
+##############################################################################
+# No of Cells in each bucket. Decrease if goes out of memory. 
+
+BucketSize=64
+
+# No of buckets in each tables is 2^{this number}. Too small will never finish. Decrease if goes out of memoryy. #Larger is better. Must be < 27
+
+RangePow=26
+
+# Increase if MinHashing Takes a lot of Time. Must be power of 2.
+
+MinHashChunkSize=128
+
+# Processes these many records in parallel, larger is faster. Decrease if goes out of memory
+Chunk=500000
