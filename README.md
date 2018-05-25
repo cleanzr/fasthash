@@ -1,10 +1,9 @@
- Unique Entity Estimation Package (UEE package)
+ fasthash Package 
  =============
  
  #### Introduction
  
- The [Unique Entity Estimation Algorithm](http://arxiv.org/abs/1305.6659) is a way of tackling a sub-task of entity resolution (record linkage or de-duplication), namely unique estimation with associated standard error of these estimates. 
-Unique entity estimation shares many fundamental challenges of entity resolution, namely, that the computational cost of all-to-all entity comparisons is intractable for large databases. To circumvent this computational barrier, we propose an efficient (near-linear time) estimation algorithm based on locality sensitive hashing (LSH). Our estimator, under realistic assumptions, is unbiased and has provably low variance compared to existing random sampling based approaches. In addition, we empirically show its superiority over the state-of-the-art estimators on three real applications. We also apply our estimator to a subset of the Syrian conflict (March 2011 -- April 2014), where our results are very similar in nature to those of the Human Rights Data Analysis Group (HRDAG), which have provided us with the data and we use to benchmark our methodology and algorithms. For the full details of our paper, please refer to and cite [Chen, Shrivastava, Steorts (2018), To Appear, AoAS](https://arxiv.org/abs/1710.02690). Efficient C++ and Python code is provided on this repository. In addition, we provided the two public data sets and code to reproduce our LSHE estimates for full transparency and reproducibility. If one has access to the two private data sets from our paper, our code will reproduce these as well. All pre-processing scripts are included for full reproducibility and transparency. 
+ The [fasthash (Unique Entity Estimation) Algorithm](http://arxiv.org/abs/1305.6659) is a way of tackling a sub-task of entity resolution (record linkage or de-duplication), namely unique estimation with associated standard error of these estimates. Unique entity estimation shares many fundamental challenges of entity resolution, namely, that the computational cost of all-to-all entity comparisons is intractable for large databases. To circumvent this computational barrier, we propose an efficient (near-linear time) estimation algorithm based on locality sensitive hashing (LSH). Our estimator, under realistic assumptions, is unbiased and has provably low variance compared to existing random sampling based approaches. In addition, we empirically show its superiority over the state-of-the-art estimators on three real applications. We also apply our estimator to a subset of the Syrian conflict (March 2011 -- April 2014), where our results are very similar in nature to those of the Human Rights Data Analysis Group (HRDAG), which have provided us with the data and we use to benchmark our methodology and algorithms. For the full details of our paper, please refer to and cite [Chen, Shrivastava, Steorts (2018), To Appear, AoAS](https://arxiv.org/abs/1710.02690). Efficient C++ and Python code is provided on this repository. In addition, we provided the two public data sets and code to reproduce our LSHE estimates for full transparency and reproducibility. If one has access to the two private data sets from our paper, our code will reproduce these as well. All pre-processing scripts are included for full reproducibility and transparency. 
 
 #### Usage
 
@@ -75,7 +74,7 @@ Rec1 Rec2
 ...
 ```
 
-3. Next, we feed in `Restaurant_pair.csv` and `Restaurant.csv` to our UEE algorithm as given below,
+3. Next, we feed in `Restaurant_pair.csv` and `Restaurant.csv` to our fasthash algorithm as given below,
 where there are many customizable options. 
 
 ```
@@ -103,7 +102,7 @@ ID RR (reduction ratio) LSHE
 
 LSHE is the proposed estimator. RR is the reduction ratio of the number of sampled pairs used in the estimation out of total possible pairs.
 
-#### Unique Entity Estimation Script
+#### fasthash Script
 
 For better usabiity, an example script `run_script.sh` produces the estimation of our LSHE estimates very similar to our paper as well as our LSHE plots. This script will run all four data sets, assuming the user has access to the two public data sets and two private data sets. To run the script, simply change into the main directory and them run
 
@@ -116,7 +115,7 @@ Remark:  Here,  "--id" option needs to change when the parameters setting for Co
 
 #### Citation
 
-If you use our UEE algorithm package for a paper/project in academic, please use the following BibTeX entry for citation. If you are interested in using our package for propriety/industrial work, please contact the authors on the paper and the Rice/Duke licensing offices and the authors on the packages Beidi Chen (Rice), Anshumali Shrivastava (Rice), and Rebecca C. Steorts (Duke). 
+If you use our ``fasthash`` algorithm package for a paper/project in academic, please use the following BibTeX entry for citation. If you are interested in using our package for propriety/industrial work, please contact the authors on the paper and the Rice/Duke licensing offices and the authors on the packages Beidi Chen (Rice), Anshumali Shrivastava (Rice), and Rebecca C. Steorts (Duke). 
 
 ```
 @article{chen17unique,
