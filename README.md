@@ -11,8 +11,8 @@ Honors: Beidi Chen received Best Student paper award for this paper at the [IISA
 #### Usage
 
 1. Clone this repository:
-	<pre>
-    git clone https://github.com/RUSH-LAB/LSHUniqueEntityEstimator.git
+   <pre>
+    git clone https://github.com/resteorts/fasthash.git
   </pre>
   
 2. Installation
@@ -129,4 +129,4 @@ Journal = {Annals of Applied Statistics, To Appear}}
 ```
 
 #### Awknowledgements
-We would like to thank the Human Rights Data Analysis Group (HRDAG) for providing the data that has movitated this work. Specifically, we thank Megan Price and Patrick Ball for stimulating conversations and feedback that would have not made this work possible. This work would also have not been possible without the support and encouragement of Steve Fienberg and Lars Vilshuber. 
+We would like to thank the Human Rights Data Analysis Group (HRDAG) for providing the data that has movitated this work. Specifically, we thank Megan Price and Patrick Ball for stimulating conversations and feedback that would have not made this work possible. This work would also have not been possible without the support and encouragement of Steve Fienberg and Lars Vilhuber. 
