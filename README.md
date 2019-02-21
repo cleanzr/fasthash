@@ -21,10 +21,14 @@ This package is written in C++ and Python. We require at least g++ version 5 and
 
 3.  Prerequisites
 
+Software:
+ + C++ compiler
+ + Python 2.7
+
 The following packages are needed in Python for the code to run: 
 
 ```
-C++, Python 2, ngram, sklearn, numpy, scipy, matlib
+ngram, sklearn, numpy, scipy, matlib
 ```
 
 Remark: In order to install using pip, one will need to run the following commands if errors arise from the terminal due to recent changes with SSH in pip (Linux and MacOS)
@@ -38,8 +42,8 @@ pip2 install numpy scipy matplotlib
 
 ```
 cd C++Codes
-g++ -std=c++11 *.cpp -fopenmp (on Windows and Linux)
-g++ *.cpp -fopenmp (on MacOS) 
+g++ -o minhash -std=c++11 *.cpp -fopenmp (on Windows and Linux)
+g++ -o minhash *.cpp -fopenmp (on MacOS) 
 ```
 
 Remark: For mac users, the g++ version needs to be 5 or higher.
@@ -65,7 +69,7 @@ Use the C++ Package folder in this repository. This is a fast minhash package wh
 
 1. Update the Config file for minhash and run the program (Remember to change the outputfile name option to Restaurant_pair.csv or the particular name of your data set.) The second and third arguments are K and L respectively.
 ```
-./a.out Config.txt 1 10
+./C++Codes/minhash config_restaurant.txt 1 10
 ```
 
 The output is `Restaurant_pair.csv` where the output is candidate record pairs:
@@ -81,7 +85,7 @@ Rec1 Rec2
 where there are many customizable options. 
 
 ```
-Python pipeline.py --input Restaurant_pair.csv --goldstan data/Restaurant.csv --output any_custom_file_name
+python pipeline.py --input Restaurant_pair.csv --goldstan data/Restaurant.csv --output any_custom_file_name
 ```
 
 
@@ -105,7 +109,7 @@ ID RR (reduction ratio) LSHE
 
 LSHE is the proposed estimator. RR is the reduction ratio of the number of sampled pairs used in the estimation out of total possible pairs.
 
-#### fasthash Script
+#### Unique Entity Estimation Script
 
 For better usabiity, an example script `run_script.sh` produces the estimation of our LSHE estimates very similar to our paper as well as our LSHE plots. This script will run all four data sets, assuming the user has access to the two public data sets and two private data sets. To run the script, simply change into the main directory and them run
 
@@ -128,5 +132,6 @@ Year = {2018},
 Journal = {Annals of Applied Statistics, To Appear}}
 ```
 
-#### Awknowledgements
-We would like to thank the Human Rights Data Analysis Group (HRDAG) for providing the data that has movitated this work. Specifically, we thank Megan Price and Patrick Ball for stimulating conversations and feedback that would have not made this work possible. This work would also have not been possible without the support and encouragement of Steve Fienberg and Lars Vilhuber. 
+### Acknowledgements
+
+We would like to thank the Human Rights Data Analysis Group (HRDAG) for providing the data that has movitated this work. Specifically, we thank Megan Price and Patrick Ball for stimulating conversations and feedback that would have not made this work possible. This work would also have not been possible without the support and encouragement of Steve Fienberg and Lars Vilhuber.
