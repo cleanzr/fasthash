@@ -43,7 +43,7 @@ pip2 install numpy scipy matplotlib
 ```
 cd C++Codes
 g++ -o minhash -std=c++11 *.cpp -fopenmp (on Windows and Linux)
-g++ *.cpp -fopenmp (on MacOS) 
+g++ -o minhash *.cpp -fopenmp (on MacOS) 
 ```
 
 Remark: For mac users, the g++ version needs to be 5 or higher.
@@ -131,3 +131,7 @@ Title = {Unique Entity Estimation with an Application to the Syrian Conflict},
 Year = {2018},
 Journal = {Annals of Applied Statistics, To Appear}}
 ```
+
+### Acknowledgements
+
+We would like to thank the Human Rights Data Analysis Group (HRDAG) for providing the data that has movitated this work. Specifically, we thank Megan Price and Patrick Ball for stimulating conversations and feedback that would have not made this work possible. This work would also have not been possible without the support and encouragement of Steve Fienberg and Lars Vilhuber.
